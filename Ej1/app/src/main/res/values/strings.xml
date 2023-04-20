@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Ej1</string>
+    <string name="app_name">Paula Flores</string>
+    <string name="registro">REGISTRO</string>
+    <string name="version">Versión 1.0</string>
+    <string name="boton">Registrar</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="hintApellido">Apellido</string>
+    <string name="hintEmail">Correo</string>
+    <string name="ingresa_valor">Ingresa un valor</string>
+    <string name="valor_requerido">Valor requerido</string>
 </resources>
