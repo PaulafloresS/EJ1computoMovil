@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backgroundSplash">#EA81FB</color>
-    <color name="backgroundMain">#B52F079E</color>
+    <color name="backgroundMain">#B59DF3</color>
+    <color name="backgroundDatos">#6BF495D4</color>
 
 </resources>

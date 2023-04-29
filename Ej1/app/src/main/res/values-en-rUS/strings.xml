@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Paula Flores</string>
     <string name="registro">REGISTRO</string>
@@ -15,35 +16,13 @@
     <string name="carrera5">Ingenería Geofísica</string>
     <string name="carrera6">Ingenería Geológica</string>
     <string name="carrera7">Ingenería Petrolera</string>
-    <string name="carrera8">Ingenería de Minas</string>
+    <string name="carrera8">Ingenería de Minas y Metalurgia</string>
     <string name="carrera9">Ingenería en Computación</string>
     <string name="carrera10">Ingenería Eléctrica Electrónica</string>
-    <string name="carrera11">Ingenería en Telecomunicación</string>
+    <string name="carrera11">Ingenería en Telecomunicaciones</string>
     <string name="carrera12">Ingenería Mecánica</string>
     <string name="carrera13">Ingenería Industrial</string>
     <string name="carrera14">Ingenería Mecatrónica</string>
-    <string name="carrera15">Ingenería Biomédica</string>
+    <string name="carrera15">Ingenería en Sistemas Biomédicos</string>
     <string name="date">Fecha de nacimiento</string>
-    <string name="NumCuenta">Número de cuenta</string>
-    <string name="SeleccionaCarrera">Selecciona tu carrera</string>
-    <string name="IngresaFecha">Ingresa tu Fecha de Nacimiento</string>
-
-    <string-array name="carreras">
-        <item>@string/SeleccionaCarrera</item>
-        <item>@string/carrera1</item>
-        <item>@string/carrera2</item>
-        <item>@string/carrera3</item>
-        <item>@string/carrera4</item>
-        <item>@string/carrera5</item>
-        <item>@string/carrera6</item>
-        <item>@string/carrera7</item>
-        <item>@string/carrera8</item>
-        <item>@string/carrera9</item>
-        <item>@string/carrera10</item>
-        <item>@string/carrera11</item>
-        <item>@string/carrera12</item>
-        <item>@string/carrera13</item>
-        <item>@string/carrera14</item>
-        <item>@string/carrera15</item>
-    </string-array>
 </resources>
