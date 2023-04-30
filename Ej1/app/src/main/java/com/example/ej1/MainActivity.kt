@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     //var patron:Pattern=Pattern.compile("^[^@]+@[^@]+\\.[a-zA-Z]{2,}\$")
     //var comparador:Matcher = patron.matcher(binding.etEmail.text)
 
+    var diaa =0
+    var mess = 0
+    var anioo =0
     var bandera = true
     var age =0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,6 +63,9 @@ class MainActivity : AppCompatActivity() {
                     tv.text = "Date: $selectedDayOfMonth/${selectedMonth + 1}/$selectedYear"
 
                     age = calculateAge(selectedDate.timeInMillis)
+                    diaa = selectedDayOfMonth
+                    mess= selectedMonth
+                    anioo = selectedYear
                     // Aquí puedes usar la variable age para hacer lo que necesites con la edad calculada
                 },
                 year,
@@ -71,7 +77,9 @@ class MainActivity : AppCompatActivity() {
                 System.currentTimeMillis() // Aquí se establece la fecha máxima permitida
 
             datePickerDialog.show()
+
         }
+
 
         //datos
 
@@ -183,6 +191,10 @@ private fun isValidEmail(email: EditText)=
             intent.putExtra("email", binding.etEmail.text.toString())
             intent.putExtra("num_cuenta", binding.etNumCuenta.text.toString())
             intent.putExtra("fecha_nac", age.toString())
+            intent.putExtra("dia",diaa)
+            intent.putExtra("mes",mess)
+            intent.putExtra("anio",anioo)
+
             startActivity(intent)
 
         }
