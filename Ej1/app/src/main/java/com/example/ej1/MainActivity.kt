@@ -40,12 +40,15 @@ class MainActivity : AppCompatActivity() {
                 view: View?,
                 position: Int,
                 id: Long) {
+
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
 
         }
+
+
         //date picker
         val tv = findViewById<TextView>(R.id.tv_fechaNac)
         val cal = Calendar.getInstance()
@@ -194,11 +197,14 @@ private fun isValidEmail(email: EditText)=
             intent.putExtra("dia",diaa)
             intent.putExtra("mes",mess)
             intent.putExtra("anio",anioo)
-
             startActivity(intent)
 
         }
 
 
     }
+}
+
+private fun Intent.putExtra(s: String, spinner: Spinner) {
+
 }

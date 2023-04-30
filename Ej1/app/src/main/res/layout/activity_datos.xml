@@ -174,7 +174,7 @@
         app:layout_constraintVertical_bias="0.933" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivprefesion"
+        android:id="@+id/ivprofesion"
         android:layout_width="119dp"
         android:layout_height="126dp"
         android:src="@drawable/compu"
