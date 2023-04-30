@@ -8,6 +8,7 @@
     <string name="hintEmail">Correo</string>
     <string name="ingresa_valor">Ingresa un valor</string>
     <string name="valor_requerido">Valor requerido</string>
+    <string name="correo_invalido">Correo Inválido</string>
     <string name="carrera1">Ingenería Aeroespacial</string>
     <string name="carrera2">Ingenería Civil</string>
     <string name="carrera3">Ingenería Geomática</string>

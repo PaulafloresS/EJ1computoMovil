@@ -1,23 +1,15 @@
 package com.example.ej1
 
 import android.app.DatePickerDialog
-import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.util.Patterns
 import android.view.View
-import android.view.ViewParent
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.ej1.databinding.ActivityMainBinding
-import java.text.FieldPosition
 import java.util.Calendar
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
 
@@ -102,13 +94,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+private fun isValidEmail(email: EditText)=
+    (!TextUtils.isEmpty(email.toString()) && Patterns.EMAIL_ADDRESS.matcher(email.toString()).matches())
     fun click(view: View) {
-
-
-        when (view.id) {
-        }
-
         with(binding) {
             if (etNombre.text.isEmpty()) {
                 etNombre.error = getString(R.string.ingresa_valor)
@@ -163,6 +151,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
                 bandera = false
+            }else{
+                bandera=true
             }
             if(binding.spinner.selectedItemPosition ==0){
                 Toast.makeText(
@@ -174,7 +164,18 @@ class MainActivity : AppCompatActivity() {
             }else{
                 bandera = true
             }
+            if(isValidEmail(binding.etEmail)){
+                bandera=true
+            }else{
+                Toast.makeText(
+                    this@MainActivity,
+                    getString(R.string.correo_invalido),
+                    Toast.LENGTH_LONG
+                ).show()
+
+            }
         }
+
         if (bandera == true) {
             val intent = Intent(this, Datos::class.java)
             intent.putExtra("nombre", binding.etNombre.text.toString())
