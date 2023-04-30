@@ -5,7 +5,6 @@ import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.ViewParent
 import android.widget.AdapterView
@@ -23,45 +22,41 @@ import java.util.regex.Pattern
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    //var patron:Pattern=Pattern.compile("^[^@]+@[^@]+\\.[a-zA-Z]{2,}\$")
+    //var comparador:Matcher = patron.matcher(binding.etEmail.text)
 
     var bandera = true
     var age =0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
-
-        val tv = findViewById<TextView>(R.id.tv_fechaNac)
-        val cal = Calendar.getInstance()
-        val year = cal.get(Calendar.YEAR)
-        val month = cal.get(Calendar.MONTH)
-        val day = cal.get(Calendar.DAY_OF_MONTH)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-      //  binding.tvFechaNac.text = calculateAge(binding.).toString()
+        //  binding.tvFechaNac.text = calculateAge(binding.).toString()
         //spinner
         val spinner = findViewById<Spinner>(R.id.spinner)
         val lista = resources.getStringArray(R.array.carreras)
         val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, lista)
         spinner.adapter = adaptador
         val btn: Button = findViewById(R.id.boton)
-        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
                 position: Int,
-                id: Long
-            ) {
+                id: Long) {
             }
-
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
 
         }
         //date picker
-
+        val tv = findViewById<TextView>(R.id.tv_fechaNac)
+        val cal = Calendar.getInstance()
+        val year = cal.get(Calendar.YEAR)
+        val month = cal.get(Calendar.MONTH)
+        val day = cal.get(Calendar.DAY_OF_MONTH)
 
         tv.setOnClickListener {
             val datePickerDialog = DatePickerDialog(
@@ -72,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
                     tv.text = "Date: $selectedDayOfMonth/${selectedMonth + 1}/$selectedYear"
 
-                     age = calculateAge(selectedDate.timeInMillis)
+                    age = calculateAge(selectedDate.timeInMillis)
                     // Aquí puedes usar la variable age para hacer lo que necesites con la edad calculada
                 },
                 year,
@@ -86,8 +81,7 @@ class MainActivity : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        //calculando horoscopos
-
+        //datos
 
 
     }
@@ -188,7 +182,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("email", binding.etEmail.text.toString())
             intent.putExtra("num_cuenta", binding.etNumCuenta.text.toString())
             intent.putExtra("fecha_nac", age.toString())
-
             startActivity(intent)
 
         }

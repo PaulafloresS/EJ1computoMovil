@@ -25,4 +25,19 @@
     <string name="carrera14">Ingenería Mecatrónica</string>
     <string name="carrera15">Ingenería en Sistemas Biomédicos</string>
     <string name="date">Fecha de nacimiento</string>
+    <string name="NumCuenta">Cuenta</string>
+    <string name="SeleccionaCarrera">Selecciona tu carrera</string>
+    <string name="IngresaFecha">Ingresa tu Fecha de Nacimiento</string>
+    <string name="edad">Edad</string>
+    <string name="aries">Aries</string>
+    <string name="tauro">Tauro</string>
+    <string name="geminis">Géminis</string>
+    <string name="cancer">Cáncer</string>
+    <string name="leo">Leo</string>
+    <string name="virgo">Virgo</string>
+    <string name="libra">Escorpión</string>
+    <string name="sagitario">Sagitario</string>
+    <string name="capricornio">Capricornio</string>
+    <string name="acuario">Acuario</string>
+    <string name="picis">Piscis</string>
 </resources>
