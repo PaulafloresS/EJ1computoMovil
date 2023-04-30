@@ -53,6 +53,7 @@
     <string name="caballo">Caballo</string>
     <string name="mono">Mono</string>
     <string name="gallo">Gallo</string>
+    <string name="FechaDeNacimiento">Nacimiento</string>
     <string-array name="carreras">
         <item>@string/SeleccionaCarrera</item>
         <item>@string/carrera1</item>

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.*
@@ -107,8 +108,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-private fun isValidEmail(email: EditText)=
-    (!TextUtils.isEmpty(email.toString()) && Patterns.EMAIL_ADDRESS.matcher(email.toString()).matches())
+    private fun isValidEmail(mail: CharSequence) =
+        (!TextUtils.isEmpty(mail) && Patterns.EMAIL_ADDRESS.matcher(mail).matches())
     fun click(view: View) {
         with(binding) {
             if (etNombre.text.isEmpty()) {
@@ -177,14 +178,16 @@ private fun isValidEmail(email: EditText)=
             }else{
                 bandera = true
             }
-            if(isValidEmail(binding.etEmail)){
-                bandera=true
-            }else{
+            if(!isValidEmail(etEmail.text.toString())){
                 Toast.makeText(
                     this@MainActivity,
                     getString(R.string.correo_invalido),
                     Toast.LENGTH_LONG
                 ).show()
+                Log.d("correo","es incorrecto")
+
+            }else{
+                Log.d("correo","es correcto")
 
             }
         }

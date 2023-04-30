@@ -31,7 +31,7 @@ class Datos : AppCompatActivity() {
         binding.idtvApellido.text = nombre
         binding.idtvNombre.text = apellido
 
-        //carreras
+        //CARRERAS
         if(valorSeleccionado == 1) {
             binding.tvprefesion.text = getString(R.string.carrera1)
             binding.ivprofesion.setImageResource(R.drawable.aeroespacial)
@@ -107,9 +107,9 @@ class Datos : AppCompatActivity() {
         }
 
         Log.d("fecha","${mes}"+" "+" "+"${dia}")
-       zodiaco(dia,mes)
 
-        //calculando el horoscopo chino
+
+        //HOROSCOPO CHINO
         if(year==1936 || year==1948 || year==1960 || year==1972 ||year==1984 ||year==1996 || year==2008){
             binding.tvChino.text= getString(R.string.rata)
             binding.ivchino.setImageResource(R.drawable.rata)
@@ -158,73 +158,71 @@ class Datos : AppCompatActivity() {
             binding.tvChino.text = getString(R.string.cerdo)
             binding.ivchino.setImageResource(R.drawable.cerdo)
         }
-
-    }
-
-    private  fun zodiaco(dia: Int, mes: Int) {
-        when {
-            (mes == 1 && dia >= 20 || mes == 2 && dia <= 19) -> {
-                binding.tvZodiacal.text = getString(R.string.acuario)
-                binding.ivZodiaco.setImageResource(R.drawable.acuario)
-            }
-
-            (mes == 2 && dia >= 19 || mes == 3 && dia <= 20) -> {
-                binding.tvZodiacal.text = getString(R.string.picis)
-                binding.ivZodiaco.setImageResource(R.drawable.piscis)
-            }
-
-            (mes == 12 && dia >= 22 || mes == 1 && dia <= 19) -> {
-                binding.tvZodiacal.text = getString(R.string.capricornio)
-                binding.ivZodiaco.setImageResource(R.drawable.capricornio)
-            }
-
-            (mes == 11 && dia >= 22 || mes == 12 && dia <= 21) -> {
-                binding.tvZodiacal.text = getString(R.string.sagitario)
-                binding.ivZodiaco.setImageResource(R.drawable.sagitario)
-            }
-
-            (mes == 10 && dia >= 23 || mes == 11 && dia <= 21) -> {
-                binding.tvZodiacal.text = getString(R.string.escorpion)
-                binding.ivZodiaco.setImageResource(R.drawable.escorpio)
-            }
-
-            (mes == 9 && dia >= 23 || mes == 10 && dia <= 22) -> {
-                binding.tvZodiacal.text =  getString(R.string.libra)
-                binding.ivZodiaco.setImageResource(R.drawable.libra)
-            }
-
-            (mes == 8 && dia >= 23 || mes == 9 && dia <= 22) -> {
-                binding.tvZodiacal.text =  getString(R.string.virgo)
-                binding.ivZodiaco.setImageResource(R.drawable.virgo)
-            }
-
-            (mes == 7 && dia >= 23 || mes == 8 && dia <= 22) -> {
-                binding.tvZodiacal.text =  getString(R.string.leo)
-                binding.ivZodiaco.setImageResource(R.drawable.leo)
-            }
-
-            (mes == 6 && dia >= 21 || mes == 7 && dia <= 22) -> {
-                binding.tvZodiacal.text =  getString(R.string.cancer)
-                binding.ivZodiaco.setImageResource(R.drawable.cancer)
-            }
-
-            (mes == 5 && dia >= 21 || mes == 6 && dia <= 20) -> {
-                binding.tvZodiacal.text =  getString(R.string.geminis)
-                binding.ivZodiaco.setImageResource(R.drawable.geminis)
-            }
-
-            (mes == 4 && dia >= 20|| mes == 5 && dia <= 20) -> {
-                binding.tvZodiacal.text =  getString(R.string.tauro)
-                binding.ivZodiaco.setImageResource(R.drawable.tauro)
-            }
-
-            (mes == 3 && dia >= 21 || mes == 4 && dia <= 19) -> {
-                binding.tvZodiacal.text =  getString(R.string.aries)
-                binding.ivZodiaco.setImageResource(R.drawable.aries)
-            }
-
-            else -> "Input invalido"
+        //SIGNO ZODIACAL
+        if(mes == 1 && dia >= 20 || mes == 2 && dia <= 19){
+            binding.tvZodiacal.text = getString(R.string.acuario)
+            binding.ivZodiaco.setImageResource(R.drawable.acuario)
         }
+        if(mes == 1 && dia >= 20 || mes == 2 && dia <= 19){
+            binding.tvZodiacal.text = getString(R.string.acuario)
+            binding.ivZodiaco.setImageResource(R.drawable.acuario)
+        }
+
+        if(mes == 2 && dia >= 19 || mes == 3 && dia <= 20) {
+            binding.tvZodiacal.text = getString(R.string.picis)
+            binding.ivZodiaco.setImageResource(R.drawable.piscis)
+        }
+
+        if(mes == 12 && dia >= 22 || mes == 1 && dia <= 19) {
+            binding.tvZodiacal.text = getString(R.string.capricornio)
+            binding.ivZodiaco.setImageResource(R.drawable.capricornio)
+        }
+
+        if(mes == 11 && dia >= 22 || mes == 12 && dia <= 21){
+            binding.tvZodiacal.text = getString(R.string.sagitario)
+            binding.ivZodiaco.setImageResource(R.drawable.sagitario)
+        }
+
+       if (mes == 10 && dia >= 23 || mes == 11 && dia <= 21) {
+            binding.tvZodiacal.text = getString(R.string.escorpion)
+            binding.ivZodiaco.setImageResource(R.drawable.escorpio)
+        }
+
+        if(mes == 9 && dia >= 23 || mes == 10 && dia <= 22)  {
+            binding.tvZodiacal.text =  getString(R.string.libra)
+            binding.ivZodiaco.setImageResource(R.drawable.libra)
+        }
+
+       if (mes == 8 && dia >= 23 || mes == 9 && dia <= 22) {
+            binding.tvZodiacal.text =  getString(R.string.virgo)
+            binding.ivZodiaco.setImageResource(R.drawable.virgo)
+        }
+
+       if (mes == 7 && dia >= 23 || mes == 8 && dia <= 22) {
+            binding.tvZodiacal.text =  getString(R.string.leo)
+            binding.ivZodiaco.setImageResource(R.drawable.leo)
+        }
+
+       if (mes == 6 && dia >= 21 || mes == 7 && dia <= 22)  {
+            binding.tvZodiacal.text =  getString(R.string.cancer)
+            binding.ivZodiaco.setImageResource(R.drawable.cancer)
+        }
+
+       if (mes == 5 && dia >= 21 || mes == 6 && dia <= 20){
+            binding.tvZodiacal.text =  getString(R.string.geminis)
+            binding.ivZodiaco.setImageResource(R.drawable.geminis)
+        }
+
+       if (mes == 4 && dia >= 20|| mes == 5 && dia <= 20) {
+            binding.tvZodiacal.text =  getString(R.string.tauro)
+            binding.ivZodiaco.setImageResource(R.drawable.tauro)
+        }
+
+        if(mes == 3 && dia >= 21 || mes == 4 && dia <= 19) {
+            binding.tvZodiacal.text =  getString(R.string.aries)
+            binding.ivZodiaco.setImageResource(R.drawable.aries)
+        }
+
 
     }
 
