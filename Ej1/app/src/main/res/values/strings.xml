@@ -27,6 +27,8 @@
     <string name="NumCuenta">Cuenta</string>
     <string name="SeleccionaCarrera">Selecciona tu carrera</string>
     <string name="IngresaFecha">Ingresa tu Fecha de Nacimiento</string>
+    <string name="edad">Edad</string>
+    <string name="acuario">acuario</string>
 
     <string-array name="carreras">
         <item>@string/SeleccionaCarrera</item>
