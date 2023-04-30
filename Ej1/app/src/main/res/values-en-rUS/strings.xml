@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Paula Flores</string>
+    <string name="app_name">Paula Flowers</string>
     <string name="registro">REGISTRO</string>
     <string name="version">Versión 1.0</string>
     <string name="boton">Registrar</string>
@@ -36,9 +36,22 @@
     <string name="cancer">Cáncer</string>
     <string name="leo">Leo</string>
     <string name="virgo">Virgo</string>
-    <string name="libra">Escorpión</string>
+    <string name="libra">Libra</string>
+    <string name="escorpion">Escorpión</string>
     <string name="sagitario">Sagitario</string>
     <string name="capricornio">Capricornio</string>
     <string name="acuario">Acuario</string>
     <string name="picis">Piscis</string>
+    <string name="rata">Rata</string>
+    <string name="perro">Perro</string>
+    <string name="cerdo">Cerdo</string>
+    <string name="cabra">Cabra</string>
+    <string name="buey">Buey</string>
+    <string name="tigre">Tigre</string>
+    <string name="conejo">Conejo</string>
+    <string name="dragon">Dragón</string>
+    <string name="serpiente">Serpiente</string>
+    <string name="caballo">Caballo</string>
+    <string name="mono">Mono</string>
+    <string name="gallo">Gallo</string>
 </resources>

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     var anioo =0
     var bandera = true
     var age =0
+   var temporal =0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                 view: View?,
                 position: Int,
                 id: Long) {
+                temporal = position
 
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -197,6 +199,7 @@ private fun isValidEmail(email: EditText)=
             intent.putExtra("dia",diaa)
             intent.putExtra("mes",mess)
             intent.putExtra("anio",anioo)
+            intent.putExtra("valor_seleccionado",temporal)
             startActivity(intent)
 
         }
