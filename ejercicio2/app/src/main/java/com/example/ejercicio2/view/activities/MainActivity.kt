@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2.databinding.ActivityMainBinding
-import com.example.ejercicio2.model.EstudianteDetail
 import com.example.ejercicio2.model.Estudiantes
 import com.example.ejercicio2.network.HarryApi
 import com.example.ejercicio2.network.RetrofitService
@@ -27,8 +26,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        val bundle = intent.extras
+
+        val id = bundle?.getString("id", "")
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
-            .getEstudiantes("Estudiantes")  //Para Apiary
+
+            .getEstudiantes("api/characters/students") //Para Apiary
         //.getGames("cm/games/games_list.php") //Para www.serverbpw.com
         call.enqueue(object : Callback<ArrayList<Estudiantes>>{
             override fun onResponse(
@@ -40,8 +43,8 @@ class MainActivity : AppCompatActivity() {
                 Log.i(Constans.LOGTAG,"Datos: ${response.body().toString()}")
                 binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
                 //manejar que no sea nulo
-                binding.rvMenu.adapter = EstudianteAdapter(this@MainActivity, response.body()!!){
-                    selectedEstudiante: Estudiantes -> estudianteCliked(selectedEstudiante)
+                binding.rvMenu.adapter = EstudianteAdapter(this@MainActivity, response.body()!!) { selectedEstudiante: Estudiantes ->
+                    estudianteClicked(selectedEstudiante)
                 }
             }
 
@@ -50,13 +53,22 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "No hay conexion",Toast.LENGTH_SHORT).show()
             }
         })
+
     }
-    private fun estudianteCliked(estudiante: Estudiantes){
-        Toast.makeText(this, "Click en el elemento ${estudiante.id}", Toast.LENGTH_SHORT).show()
+    private fun estudianteClicked(estudiantes: Estudiantes) {
+      Toast.makeText(this, "Clic en el elemento con títiulo ${estudiantes.name}", Toast.LENGTH_SHORT)
+            .show()
+
         val bundle = Bundle()
-        bundle.putString("id",estudiante.id)
-        val intent = Intent(this, Details:: class.java)
+
+        bundle.putString("id", estudiantes.id)
+
+        val intent = Intent(this, Details::class.java)
+
         intent.putExtras(bundle)
+
         startActivity(intent)
+
+
     }
 }

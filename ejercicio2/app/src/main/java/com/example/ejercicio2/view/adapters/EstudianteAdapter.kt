@@ -3,13 +3,11 @@ import com.example.ejercicio2.databinding.HarryBinding
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ExpandableListView.OnChildClickListener
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ejercicio2.model.Estudiantes
 
-class EstudianteAdapter(private var context : Context, private var estudiantes: ArrayList<Estudiantes>
-, private val clickListener: (Estudiantes)-> Unit): RecyclerView.Adapter<EstudianteAdapter.ViewHolder>(){
+class EstudianteAdapter(private var context: Context, private var estudiantes: ArrayList<Estudiantes>, private val clickListener: (Estudiantes) -> Unit): RecyclerView.Adapter<EstudianteAdapter.ViewHolder>() {
     class ViewHolder(view: HarryBinding): RecyclerView.ViewHolder(view.root){
         val ivestudiante = view.ivestudiantes
         val tvNombre = view.tvNombre
@@ -35,5 +33,7 @@ class EstudianteAdapter(private var context : Context, private var estudiantes: 
             }
 
     }
+
+
 
 }

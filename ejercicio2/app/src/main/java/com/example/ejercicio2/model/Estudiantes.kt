@@ -3,7 +3,7 @@ package com.example.ejercicio2.model
 import com.google.gson.annotations.SerializedName
 
 data class Estudiantes(
-    @SerializedName("id")
+    @SerializedName("house")
     var id: String?,
     @SerializedName("image")
     var image: String?,
