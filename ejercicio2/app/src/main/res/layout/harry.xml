@@ -70,7 +70,7 @@
         android:fontFamily="@font/alegreya_sc"
         android:gravity="fill_vertical"
         android:text="Nombre"
-        android:textColor="#060115"
+        android:textColor="#CFA814"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"

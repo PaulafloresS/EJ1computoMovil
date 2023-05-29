@@ -23,15 +23,13 @@ class Details : AppCompatActivity() {
         val id = bundle?.getString("id", "")
 
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
-            .getEstudianteDetailApiary(id,)
+            .getEstudianteDetailApiary(id)
 
         call.enqueue(object : Callback<EstudianteDetail> {
             override fun onResponse(
                 call: Call<EstudianteDetail>,
                 response: Response<EstudianteDetail>
             ) {
-
-
                 binding.tvtitle.text = response.body()!!.title
                 binding.tvBirth.text = response.body()!!.birth
                 binding.tvid.text = response.body()!!.id

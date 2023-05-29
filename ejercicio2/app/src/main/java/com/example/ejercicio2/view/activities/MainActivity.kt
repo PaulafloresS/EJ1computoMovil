@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2.databinding.ActivityMainBinding
+import com.example.ejercicio2.model.EstudianteDetail
 import com.example.ejercicio2.model.Estudiantes
 import com.example.ejercicio2.network.HarryApi
 import com.example.ejercicio2.network.RetrofitService
@@ -24,10 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         val bundle = intent.extras
-
         val id = bundle?.getString("id", "")
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
 
@@ -68,7 +66,6 @@ class MainActivity : AppCompatActivity() {
         intent.putExtras(bundle)
 
         startActivity(intent)
-
 
     }
 }

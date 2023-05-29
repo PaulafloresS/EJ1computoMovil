@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class EstudianteDetail(
     @SerializedName("id")
-   public var id: String?,
+    var id: String?,
     @SerializedName("image")
     var image: String?,
     @SerializedName("title")
