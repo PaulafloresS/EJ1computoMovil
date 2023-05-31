@@ -27,13 +27,10 @@ class EstudianteAdapter(private var context: Context, private var estudiantes: A
         Glide.with(context)
             .load(estudiantes[position].image)
             .into(holder.ivestudiante)
-            holder.itemView.setOnClickListener {
-                // programar los eventos click a todo el elemento del ViewHolder
-                clickListener(estudiantes[position])
-            }
+        holder.itemView.setOnClickListener {
+            // programar los eventos click a todo el elemento del ViewHolder
+            clickListener(estudiantes[position])
+        }
 
     }
-
-
-
 }

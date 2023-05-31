@@ -18,6 +18,6 @@ interface HarryApi {
     fun getEstudianteDetailApiary(
         @Path("id") id: String?
 
-    ): retrofit2.Call<EstudianteDetail>
-   // https://private-b725c-harrypotter1.apiary-mock.com/harryPotter/Estudiantes/EstudianteDetail/1
+    ): retrofit2.Call<ArrayList<EstudianteDetail>>
+    // https://private-b725c-harrypotter1.apiary-mock.com/harryPotter/Estudiantes/EstudianteDetail/1
 }

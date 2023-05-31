@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2.databinding.ActivityMainBinding
 import com.example.ejercicio2.model.EstudianteDetail
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun estudianteClicked(estudiantes: Estudiantes) {
-      Toast.makeText(this, "Clic en el elemento con títiulo ${estudiantes.name}", Toast.LENGTH_SHORT)
+        Toast.makeText(this, "Clic en el elemento con títiulo ${estudiantes.name}", Toast.LENGTH_SHORT)
             .show()
 
         val bundle = Bundle()

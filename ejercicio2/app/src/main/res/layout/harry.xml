@@ -16,13 +16,18 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/ivestudiantes"
-        android:layout_width="115dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="5dp"
+        android:layout_width="112dp"
+        android:layout_height="106dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/sombrero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:riv_corner_radius="10dp" />
+        app:layout_constraintVertical_bias="0.025"
+        app:riv_corner_radius="10dp"
+        tools:src="@drawable/sombrero" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

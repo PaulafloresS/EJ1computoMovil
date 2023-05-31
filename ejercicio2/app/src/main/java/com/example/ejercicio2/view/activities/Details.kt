@@ -1,16 +1,23 @@
 package com.example.ejercicio2.view.activities
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.ejercicio2.databinding.ActivityDetailsBinding
 import com.example.ejercicio2.model.EstudianteDetail
+import com.example.ejercicio2.model.Estudiantes
 import com.example.ejercicio2.network.HarryApi
 import com.example.ejercicio2.network.RetrofitService
+import com.example.ejercicio2.utils.Constans
+import com.example.ejercicio2.view.adapters.EstudianteAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class Details : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
@@ -25,30 +32,32 @@ class Details : AppCompatActivity() {
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
             .getEstudianteDetailApiary(id)
 
-        call.enqueue(object : Callback<EstudianteDetail> {
+        call.enqueue(object : Callback<ArrayList<EstudianteDetail>> {
             override fun onResponse(
-                call: Call<EstudianteDetail>,
-                response: Response<EstudianteDetail>
+                call: Call<ArrayList<EstudianteDetail>>,
+                response: Response<ArrayList<EstudianteDetail>>
             ) {
-                binding.tvtitle.text = response.body()!!.title
-                binding.tvBirth.text = response.body()!!.birth
-                binding.tvid.text = response.body()!!.id
-                binding.tvEyecoulor.text = response.body()!!.eyeColour
-                binding.tvhairCoulor.text = response.body()!!.hairColour
-                binding.tvHouse.text= response.body()!!.house
-                binding.tvancestry.text = response.body()!!.ancestry
-                binding.tvpatronus.text = response.body()!!.patronus
+                val estudiante = response.body()!![0]
+                binding.tvid.text = estudiante.id
+                binding.tvpatronus.text = estudiante.patronus
+                binding.tvBirth.text = estudiante.dateOfBirth
+                binding.tvHouse.text = estudiante.house
+                binding.tvancestry.text = estudiante.ancestry
+                binding.tvEyecoulor.text = estudiante.eyeColour
+                binding.tvhairCoulor.text = estudiante.hairColour
+                binding.tvtitle.text = estudiante.actor
+                binding.tvHouse.text = estudiante.house
 
                 Glide.with(this@Details)
-                    .load(response.body()!!.image)
+                    .load(estudiante.image)
                     .into(binding.ivcaracteristicas)
+
+
             }
 
-            override fun onFailure(call: Call<EstudianteDetail>, t: Throwable) {
-                Toast.makeText(this@Details, "No hay conexión", Toast.LENGTH_SHORT).show()
+            override fun onFailure(call: Call<ArrayList<EstudianteDetail>>, t: Throwable) {
+                TODO("Not yet implemented")
             }
-
         })
-
     }
-}
+    }
