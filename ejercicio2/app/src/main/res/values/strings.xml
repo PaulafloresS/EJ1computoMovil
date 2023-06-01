@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">ejercicio2</string>
+    <string name="app_name">HarryPotter</string>
+    <string name="id">Id</string>
+    <string name="cabello">Hair</string>
+    <string name="house">House</string>
+    <string name="Bith">Birth</string>
+    <string name="ancestry">Ancestry</string>
+    <string name="Actor">Actor</string>
+    <string name="patronus">Patronus</string>
+    <string name="ojos">Eyes</string>
+    <string name="inicio">Start</string>
+    <string name="Staff">Staff</string>
+    <string name="Students">Students</string>
+    <string name="Nombre">Name</string>
 </resources>

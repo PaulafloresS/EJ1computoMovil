@@ -13,11 +13,9 @@ interface HarryApi {
     fun getEstudiantes(
         @Url url: String?
     ): retrofit2.Call<ArrayList<Estudiantes>>
-
     @GET("api/character/{id}")
     fun getEstudianteDetailApiary(
         @Path("id") id: String?
-
     ): retrofit2.Call<ArrayList<EstudianteDetail>>
     // https://private-b725c-harrypotter1.apiary-mock.com/harryPotter/Estudiantes/EstudianteDetail/1
 }

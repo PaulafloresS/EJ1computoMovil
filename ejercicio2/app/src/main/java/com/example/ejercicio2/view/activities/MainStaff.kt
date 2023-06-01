@@ -17,7 +17,6 @@ import retrofit2.Response
 
 class MainStaff : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -38,10 +37,8 @@ class MainStaff : AppCompatActivity(){
                 binding.rvMenu.adapter = EstudianteAdapter(this@MainStaff, response.body()!!) { selectedEstudiante: Estudiantes ->
                     estudianteClicked(selectedEstudiante)
                     val image = binding.rvMenu
-
                 }
             }
-
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
                 binding.pbconectar.visibility = View.GONE
                 Toast.makeText(this@MainStaff, "No hay conexion", Toast.LENGTH_SHORT).show()
@@ -54,6 +51,5 @@ class MainStaff : AppCompatActivity(){
         val intent = Intent(this, Details::class.java)
         intent.putExtras(bundle)
         startActivity(intent)
-
     }
 }

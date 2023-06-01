@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ivsplash"
         android:layout_width="448dp"
         android:layout_height="363dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#398371</color>
     <color name="boton">#8A9F10</color>
+    <color name="details">#068552</color>
+    <color name="caracteristicas">#CFA814</color>
+    <color name="actor">#CD1313</color>
 </resources>
