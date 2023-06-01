@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         val bundle = intent.extras
         val id = bundle?.getString("id", "")
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
-
             .getEstudiantes("api/characters/students") //Para Apiary
         //.getGames("cm/games/games_list.php") //Para www.serverbpw.com
         call.enqueue(object : Callback<ArrayList<Estudiantes>>{
@@ -52,7 +51,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "No hay conexion",Toast.LENGTH_SHORT).show()
             }
         })
-
     }
     private fun estudianteClicked(estudiantes: Estudiantes) {
         Toast.makeText(this, "Clic en el elemento con títiulo ${estudiantes.name}", Toast.LENGTH_SHORT)
