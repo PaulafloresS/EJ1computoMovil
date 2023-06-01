@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestBuilder
+import com.example.ejercicio2.R
 import com.example.ejercicio2.databinding.ActivityDetailsBinding
 import com.example.ejercicio2.model.EstudianteDetail
 import com.example.ejercicio2.model.Estudiantes
@@ -50,8 +52,8 @@ class Details : AppCompatActivity() {
 
                 Glide.with(this@Details)
                     .load(estudiante.image)
+                    .placeholder(R.drawable.sombrero)
                     .into(binding.ivcaracteristicas)
-
 
             }
 
@@ -61,3 +63,4 @@ class Details : AppCompatActivity() {
         })
     }
     }
+

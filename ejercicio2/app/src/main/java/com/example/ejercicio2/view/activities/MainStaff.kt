@@ -1,26 +1,21 @@
 package com.example.ejercicio2.view.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ejercicio2.R
 import com.example.ejercicio2.databinding.ActivityMainBinding
-import com.example.ejercicio2.model.EstudianteDetail
 import com.example.ejercicio2.model.Estudiantes
 import com.example.ejercicio2.network.HarryApi
 import com.example.ejercicio2.network.RetrofitService
-import com.example.ejercicio2.utils.Constans
 import com.example.ejercicio2.view.adapters.EstudianteAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class MainStaff : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val bundle = intent.extras
         val id = bundle?.getString("id", "")
         val call = RetrofitService.getRetrofit().create(HarryApi::class.java)
-            .getEstudiantes("api/characters/students") //Para Apiary
+            .getEstudiantes("api/characters/staff") //Para Apiary
         //.getGames("cm/games/games_list.php") //Para www.serverbpw.com
         call.enqueue(object : Callback<ArrayList<Estudiantes>>{
             override fun onResponse(
@@ -38,9 +33,9 @@ class MainActivity : AppCompatActivity() {
                 response: Response<ArrayList<Estudiantes>>
             ) {
                 binding.pbconectar.visibility = View.GONE
-                binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
+                binding.rvMenu.layoutManager = LinearLayoutManager(this@MainStaff)
                 //manejar que no sea nulo
-                binding.rvMenu.adapter = EstudianteAdapter(this@MainActivity, response.body()!!) { selectedEstudiante: Estudiantes ->
+                binding.rvMenu.adapter = EstudianteAdapter(this@MainStaff, response.body()!!) { selectedEstudiante: Estudiantes ->
                     estudianteClicked(selectedEstudiante)
                     val image = binding.rvMenu
 
@@ -49,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
                 binding.pbconectar.visibility = View.GONE
-                Toast.makeText(this@MainActivity, "No hay conexion",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainStaff, "No hay conexion", Toast.LENGTH_SHORT).show()
             }
         })
     }

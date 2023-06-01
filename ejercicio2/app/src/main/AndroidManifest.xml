@@ -18,6 +18,9 @@
             android:name=".view.activities.MainActivity2"
             android:exported="false" />
         <activity
+            android:name=".view.activities.MainStaff"
+            android:exported="false" />
+        <activity
             android:name=".view.activities.Details"
             android:exported="false" />
         <activity

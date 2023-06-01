@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/hawi" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btndos"
         android:layout_width="238dp"
         android:layout_height="109dp"
         android:drawableEnd="@drawable/btn_color"
