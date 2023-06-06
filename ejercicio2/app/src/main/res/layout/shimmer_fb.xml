@@ -6,7 +6,6 @@
     android:foreground="@drawable/custom_ripple"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
         android:layout_width="112dp"
         android:layout_height="106dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/sombrero"
+        android:background="@color/grisshimmer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
@@ -26,19 +25,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025"
         app:riv_corner_radius="10dp"
-        tools:src="@drawable/sombrero" />
+        tools:src="" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="45dp" />
+        app:layout_constraintGuide_begin="30dp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="80dp" />
+        app:layout_constraintGuide_begin="73dp" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
@@ -57,15 +58,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.36" />
+
     <TextView
         android:id="@+id/tvNombre"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="227dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/grisshimmer"
         android:fontFamily="@font/alegreya_sc"
         android:gravity="fill_vertical"
-        android:text="@string/Nombre"
+        android:text=""
         android:textColor="@color/caracteristicas"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -74,29 +77,34 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/tvActor"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="227dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/grisshimmer"
         android:fontFamily="@font/amarante"
         android:gravity="center_vertical"
-        android:text="@string/Actor"
+        android:text=""
         android:textColor="@color/actor"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.478" />
+
     <TextView
         android:id="@+id/tvid"
-        android:layout_width="234dp"
-        android:layout_height="27dp"
+        android:layout_width="227dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="16dp"
+        android:background="@color/grisshimmer"
         android:fontFamily="@font/amita"
-        android:text="@string/id"
+        android:text=""
         android:textColor="@color/details"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -105,5 +113,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.294" />
 </androidx.constraintlayout.widget.ConstraintLayout>

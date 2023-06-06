@@ -35,8 +35,8 @@ class EstudianteAdapter(private var context: Context, private var estudiantes: A
             // programar los eventos click a todo el elemento del ViewHolder
             clickListener(estudiantes[position])
         }
-       if(estudiantes[position].image == null){
-           holder.ivestudiante.setImageResource(R.drawable.sombrero)
-       }
+        if(estudiantes[position].image == null){
+            holder.ivestudiante.setImageResource(R.drawable.sombrero)
+        }
     }
 }

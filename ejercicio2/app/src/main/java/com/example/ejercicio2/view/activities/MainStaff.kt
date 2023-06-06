@@ -31,7 +31,7 @@ class MainStaff : AppCompatActivity(){
                 call: Call<ArrayList<Estudiantes>>,
                 response: Response<ArrayList<Estudiantes>>
             ) {
-                binding.pbconectar.visibility = View.GONE
+             //   binding.pbconectar.visibility = View.GONE
                 binding.rvMenu.layoutManager = LinearLayoutManager(this@MainStaff)
                 //manejar que no sea nulo
                 binding.rvMenu.adapter = EstudianteAdapter(this@MainStaff, response.body()!!) { selectedEstudiante: Estudiantes ->
@@ -40,7 +40,7 @@ class MainStaff : AppCompatActivity(){
                 }
             }
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
-                binding.pbconectar.visibility = View.GONE
+           //     binding.pbconectar.visibility = View.GONE
                 Toast.makeText(this@MainStaff, "No hay conexion", Toast.LENGTH_SHORT).show()
             }
         })

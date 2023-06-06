@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ejercicio2.R
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity() {
                 call: Call<ArrayList<Estudiantes>>,
                 response: Response<ArrayList<Estudiantes>>
             ) {
-                binding.pbconectar.visibility = View.GONE
+                binding.shimmerViewContainer.isVisible = true
+                binding.shimmerViewContainer.isVisible = false
                 binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
                 //manejar que no sea nulo
                 binding.rvMenu.adapter = EstudianteAdapter(this@MainActivity, response.body()!!) { selectedEstudiante: Estudiantes ->
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
-                binding.pbconectar.visibility = View.GONE
+               // binding.pbconectar.visibility = View.GONE
                 Toast.makeText(this@MainActivity, "No hay conexion",Toast.LENGTH_SHORT).show()
             }
         })

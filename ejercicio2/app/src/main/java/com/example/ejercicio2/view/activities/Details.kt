@@ -54,5 +54,4 @@ class Details : AppCompatActivity() {
             }
         })
     }
-    }
-
+}
