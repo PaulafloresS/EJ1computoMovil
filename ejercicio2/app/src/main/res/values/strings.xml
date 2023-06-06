@@ -12,4 +12,6 @@
     <string name="Staff">Staff</string>
     <string name="Students">Students</string>
     <string name="Nombre">Name</string>
+    <string name="sinconexion">No hay conexión</string>
+    <string name="sindato">Unknow</string>
 </resources>

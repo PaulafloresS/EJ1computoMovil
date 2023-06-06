@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ejercicio2.R
 import com.example.ejercicio2.databinding.ActivityMainBinding
 import com.example.ejercicio2.model.Estudiantes
 import com.example.ejercicio2.network.HarryApi
@@ -14,7 +16,6 @@ import com.example.ejercicio2.view.adapters.EstudianteAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
 class MainStaff : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,17 +32,20 @@ class MainStaff : AppCompatActivity(){
                 call: Call<ArrayList<Estudiantes>>,
                 response: Response<ArrayList<Estudiantes>>
             ) {
-             //   binding.pbconectar.visibility = View.GONE
+                binding.shimmerViewContainer.isVisible = true
+                binding.shimmerViewContainer.isVisible = false
                 binding.rvMenu.layoutManager = LinearLayoutManager(this@MainStaff)
-                //manejar que no sea nulo
                 binding.rvMenu.adapter = EstudianteAdapter(this@MainStaff, response.body()!!) { selectedEstudiante: Estudiantes ->
                     estudianteClicked(selectedEstudiante)
                     val image = binding.rvMenu
                 }
             }
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
-           //     binding.pbconectar.visibility = View.GONE
-                Toast.makeText(this@MainStaff, "No hay conexion", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@MainStaff,
+                    getString(R.string.sinconexion),
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
     }

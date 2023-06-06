@@ -83,13 +83,14 @@
         android:fontFamily="@font/amarante"
         android:gravity="center_vertical"
         android:text="@string/Actor"
-        android:textColor="@color/actor"
+        android:textColor="@color/nombredetalles"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
     <TextView
         android:id="@+id/tvid"
         android:layout_width="234dp"
@@ -98,7 +99,7 @@
         android:fontFamily="@font/amita"
         android:text="@string/id"
         android:textColor="@color/details"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"

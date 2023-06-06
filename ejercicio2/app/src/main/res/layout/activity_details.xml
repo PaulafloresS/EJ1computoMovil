@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ImageView
         android:id="@+id/ivcaracteristicas"
         android:layout_width="166dp"
@@ -35,19 +34,18 @@
 
     <TextView
         android:id="@+id/tvid_"
-        android:layout_width="81dp"
-        android:layout_height="34dp"
+        android:layout_width="169dp"
+        android:layout_height="25dp"
         android:fontFamily="@font/alegreya_sc"
-        android:text="@string/id"
-        android:textColor="@color/caracteristicas"
-        android:textSize="20sp"
+        android:text=""
+        android:textColor="@color/nombredetalles"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <TextView
         android:id="@+id/tvcabello_"
@@ -192,21 +190,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.957" />
-
-    <TextView
-        android:id="@+id/tvid"
-        android:layout_width="181dp"
-        android:layout_height="45dp"
-        android:text=""
-        android:textColor="@color/details"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
 
     <TextView
         android:id="@+id/ojos_"

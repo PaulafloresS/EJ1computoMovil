@@ -47,8 +47,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<ArrayList<Estudiantes>>, t: Throwable) {
-               // binding.pbconectar.visibility = View.GONE
-                Toast.makeText(this@MainActivity, "No hay conexion",Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@MainActivity,
+                    getString(R.string.sinconexion),
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
     }
