@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">HarryPotter</string>
+    <string name="id">Id</string>
+    <string name="cabello">Hair</string>
+    <string name="house">House</string>
+    <string name="Bith">Birth</string>
+    <string name="ancestry">Ancestry</string>
+    <string name="Actor">Actor</string>
+    <string name="patronus">Patronus</string>
+    <string name="ojos">Eyes</string>
+    <string name="inicio">Inicio</string>
+    <string name="Staff">Staff</string>
+    <string name="Students">Students</string>
+    <string name="Nombre">Name</string>
+    <string name="sinconexion">No hay conexión</string>
+    <string name="sindato">Unknow</string>
+    <string name="nombrelogin">Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="registro">Register</string>
+    <string name="correo">Ingresa un correo</string>
+    <string name="contrasenia">Se requiere una contraseña de 6 caracteres</string>
+    <string name="nonetwork">NO_NETWORK</string>
+    <string name="erroremail">Error: El correo no tiene el formato correcto</string>
+    <string name="erroremailet">Correo inválido</string>
+    <string name="errorpassword">La constraseña no es válida</string>
+    <string name="errorpasswordos">Al menos 6 caracteres</string>
+    <string name="errorautenticacion">No se pudo autenticar con éxito</string>
+    <string name="errorcorreo">ERROR_INVALID_EMAIL</string>
+    <string name="wrongpassword">ERROR_WRONG_PASSWORD</string>
+    <string name="wrongcorreo">ERROR_INVALID_EMAIL</string>
+</resources>
