@@ -17,7 +17,7 @@ Se usó el API de Harry Potter, recycleView , login con firebase , efecto shimme
   <img src="imagenes/login.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
     <img src="imagenes/opciones.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
     <img src="imagenes/profesores.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
-    <img src="imagenes/estudiantes,jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
+    <img src="imagenes/estudiantes.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
     <img src="imagenes/personajesnull.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
     <img src="imagenes/shimmer.jpeg" alt="Ventana emergente 1 - Error de autenticación" width="200"/>
 </div>
